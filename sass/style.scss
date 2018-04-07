@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  h3 {
+    font-size: 45px;
+    font-weight: 900;
+    color: #800000;
+    text-shadow: 2.5px 2.5px 4.5px #ffa31a;
+  }
+  .btn {
+    padding: 20px;
+    margin: 5px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #00264d;
+  }
+  i {
+    font-size: 60px;
+  }
+}
+
+#js-resultsTableElement {
+  .col-xs-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        span {
+          font-size: 20px;
+          font-weight: 700;
+          color: #00264d;
+        }
+
+      .badge {
+        background-color: #ffa31a;
+        color: #800000;
+        padding: 20px;
+        margin: 25px;
+        font-size: 30px;
+      }
+  }
+}
