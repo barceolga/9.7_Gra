@@ -6,11 +6,17 @@
   display: flex;
   flex-direction: column;
   padding: 25px;
-  h3 {
-    font-size: 45px;
+  .heading {
+    font-size: 40px;
     font-weight: 900;
     color: #800000;
     text-shadow: 2.5px 2.5px 4.5px #ffa31a;
+    text-transform: uppercase;
+    margin: 25px 0;
+  }
+  span {
+    @extend .heading;
+    color: #00264d;
   }
   .btn {
     padding: 20px;
@@ -34,6 +40,7 @@
           font-size: 20px;
           font-weight: 700;
           color: #00264d;
+          text-transform: lowercase;
         }
 
       .badge {
@@ -44,4 +51,9 @@
         font-size: 30px;
       }
   }
+    .col-xs-2 {
+     font-size: 20px;
+     font-weight: 700;
+     color: #800000;
+   }
 }
