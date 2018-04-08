@@ -3,18 +3,23 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>My first game with JS</title>
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href ="css/style.css">
     </head>
     <body>
       <div class="container">
-        <h3 class="text-center">
-          Welcome to the game
+        <div class ="row">
+          <h3 class="heading text-center">
+            Welcome to the game
+          </h3>
+        </div>
+        <div class="row text-center">
           <span class="label label-default">Rock</span>
           <span class="label label-info">Paper</span>
           <span class="label label-danger">Scissors</span>
-        </h3>
+        </div>
       </div>
       <div id="js-newGameElement" class="container">
         <div class="row text-center">
@@ -52,7 +57,7 @@
             <span id="js-playerPoints" class="badge">
               0
             </span>
-            <span id="playerName">
+            <span id="js-playerName">
               Player name
             </span>
           </div>
@@ -95,5 +100,6 @@
         </div>
       </div>
     </div>
+    <script src="./js/script.js"></script>
     </body>
   </html>
