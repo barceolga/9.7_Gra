@@ -1,19 +1,70 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-.container { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; padding: 25px; }
+.container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 25px;
+}
 
-.container .heading, .container span { font-size: 40px; font-weight: 900; color: #800000; text-shadow: 2.5px 2.5px 4.5px #ffa31a; text-transform: uppercase; margin: 25px 0; }
+.container .heading, .container span {
+  font-size: 40px;
+  font-weight: 900;
+  color: #800000;
+  text-shadow: 2.5px 2.5px 4.5px #ffa31a;
+  text-transform: uppercase;
+  margin: 25px 0;
+}
 
-.container span { color: #00264d; }
+.container span {
+  color: #00264d;
+}
 
-.container .btn { padding: 20px; margin: 5px; font-size: 30px; color: #fff; background-color: #00264d; }
+.container .btn {
+  padding: 20px;
+  margin: 5px;
+  font-size: 30px;
+  color: #fff;
+  background-color: #00264d;
+  border-radius: 15%;
+}
 
-.container i { font-size: 60px; }
+.container i {
+  font-size: 60px;
+}
 
-#js-resultsTableElement .col-xs-5 { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
+#js-resultsTableElement .col-xs-5 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
 
-#js-resultsTableElement .col-xs-5 span { font-size: 20px; font-weight: 700; color: #00264d; text-transform: lowercase; }
+#js-resultsTableElement .col-xs-5 span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #00264d;
+  text-shadow: none;
+}
 
-#js-resultsTableElement .col-xs-5 .badge { background-color: #ffa31a; color: #800000; padding: 20px; margin: 25px; font-size: 30px; }
+#js-resultsTableElement .col-xs-5 .badge {
+  background-color: #ffa31a;
+  color: #800000;
+  padding: 20px;
+  margin: 25px;
+  font-size: 30px;
+}
 
-#js-resultsTableElement .col-xs-2 { font-size: 20px; font-weight: 700; color: #800000; }
+#js-resultsTableElement .col-xs-2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #800000;
+}
+/*# sourceMappingURL=style.css.map */
