@@ -22,6 +22,11 @@ let player = {
 let computer = {
     score: 0
   };
+newGameBtn.addEventListener('click', newGame);
+pickRock.addEventListener('click', function() { playerPick('rock'); });
+pickPaper.addEventListener('click', function() { playerPick('paper'); });
+pickScissors.addEventListener('click', function() { playerPick('scissors'); });
+
 // SET GAME STRUCTURE
 
 function setGameElements() {
@@ -46,7 +51,7 @@ function setGameElements() {
       break;
   }
 }
-setGameElements();
+//setGameElements();
 
 //START NEW GAME
 
@@ -63,13 +68,13 @@ function newGame() {
     alert('We need a name for a player');
   }
 }
-newGameBtn.addEventListener('click', newGame);
+//newGameBtn.addEventListener('click', newGame);
 
 //PLAYER PICK
 
-pickRock.addEventListener('click', function() { playerPick('rock'); });
-pickPaper.addEventListener('click', function() { playerPick('paper'); });
-pickScissors.addEventListener('click', function() { playerPick('scissors'); });
+//pickRock.addEventListener('click', function() { playerPick('rock'); });
+//pickPaper.addEventListener('click', function() { playerPick('paper'); });
+//pickScissors.addEventListener('click', function() { playerPick('scissors'); });
 
 //COMPUTER PICK
 
@@ -87,7 +92,6 @@ function playerPick(playerPick){
   checkRoundWinner(playerPick, computerPick);
   setGamePoints();
   checkGameWinner();
-  setGamePoints();
   setGameElements();
 }
 //WHO WON THE ROUNHD
@@ -133,11 +137,14 @@ function checkGameWinner() {
     if (player.score == 10) {
         alert("You have won!!Congratulations!!!");
         gameState = 'ended';
-        console.log(gameState);
+        player.score = 0;
+        computer.score = 0
     } else if (computer.score == 10) {
         alert("Computer has won!!! I hope you'll have more luck next time.");
         gameState = 'ended';
-        console.log(gameState);
+        player.score = 0;
+        computer.score = 0
     }
     return gameState;
   }
+setGameElements();
