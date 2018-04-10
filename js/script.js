@@ -51,30 +51,23 @@ function setGameElements() {
       break;
   }
 }
-//setGameElements();
 
 //START NEW GAME
 
 function newGame() {
   player.name = prompt('Please enter your name', 'Player name');
   if (player.name) {
-    player.score = 0;
+    player.score =0;
     computer.score = 0;
     gameState = 'started';
     setGameElements();
     playerNameElem.innerHTML = player.name;
+    setGamePoints();
   }
   else {
     alert('We need a name for a player');
   }
 }
-//newGameBtn.addEventListener('click', newGame);
-
-//PLAYER PICK
-
-//pickRock.addEventListener('click', function() { playerPick('rock'); });
-//pickPaper.addEventListener('click', function() { playerPick('paper'); });
-//pickScissors.addEventListener('click', function() { playerPick('scissors'); });
 
 //COMPUTER PICK
 
@@ -90,7 +83,6 @@ function playerPick(playerPick){
   computerPickElem.innerHTML = computerPick;
 
   checkRoundWinner(playerPick, computerPick);
-  setGamePoints();
   checkGameWinner();
   setGameElements();
 }
@@ -122,6 +114,7 @@ function checkRoundWinner(playerPick,computerPick) {
           computer.score++;
         console.log(computer.score);
       }
+    setGamePoints();
 }
 
 //SET  GAME SCORE FOR COMPUTER AND PLAYER ON WEBSITE
@@ -137,14 +130,11 @@ function checkGameWinner() {
     if (player.score == 10) {
         alert("You have won!!Congratulations!!!");
         gameState = 'ended';
-        player.score = 0;
-        computer.score = 0
     } else if (computer.score == 10) {
         alert("Computer has won!!! I hope you'll have more luck next time.");
         gameState = 'ended';
-        player.score = 0;
-        computer.score = 0
     }
     return gameState;
   }
+
 setGameElements();
