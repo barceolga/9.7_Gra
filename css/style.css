@@ -54,6 +54,14 @@
   text-shadow: none;
 }
 
+#js-resultsTableElement .col-xs-5 i {
+  font-size: 60px;
+  font-weight: 900;
+  color: #800000;
+  text-shadow: 2.5px 2.5px 4.5px #ffa31a;
+  
+}
+
 #js-resultsTableElement .col-xs-5 .badge {
   background-color: #ffa31a;
   color: #800000;
