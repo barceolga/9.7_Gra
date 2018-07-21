@@ -157,8 +157,8 @@ function checkGameWinner() {
             winnerIdentity.innerHTML = "And the winner is:"
             gameWinner.innerHTML = "You! Hurray!";
             setWinnerStyle();
-            //setTimeout(function(){setGameElements()}, 3000);
-            //gameState = 'ended';
+            setTimeout(function(){setGameElements()}, 3000);
+            gameState = 'ended';
         } else if (computer.score == 10) {
             winnerIdentity.innerHTML = "And the winner is:"
             gameWinner.innerHTML = "Computer. Sorry:(.";
