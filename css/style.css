@@ -1,27 +1,56 @@
 * { box-sizing: border-box; }
 
-.container { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; padding: 25px; }
+.container { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: start; justify-content: flex-start; padding: 25px; }
 
-.container .heading, .container span { font-size: 40px; font-weight: 900; color: #800000; text-shadow: 2.5px 2.5px 4.5px #ffa31a; text-transform: uppercase; margin: 25px 0; }
+.container .heading, .container .first span, .container .second span, .container .third span { font-size: 40px; font-weight: 900; color: #800000; text-shadow: 2.5px 2.5px 4.5px #ffa31a; text-transform: uppercase; margin: 0px 0px 50px 0; }
 
-.container span { color: #00264d; }
+.container .col-xs-4 span { color: #00264d; display: inline-block; }
 
-.container .btn { padding: 20px; max-width: 25%; width: 24%; max-height: 31%; height: 30%; margin: 5px; font-size: 30px; color: #fff; background-color: #00264d; border-radius: 10px; }
+@keyframes moving-rock { 0% { transform: translate(0, 0) scale(1);
+    background-color: inherit; }
+  50% { transform: translate(-145px, 0) scale(1.1);
+    background-color: yellow; }
+  100% { transform: translate(0, 0) scale(1.15);
+    background-color: green; } }
+
+@keyframes moving-paper { 0% { transform: rotate(0deg) scale(1);
+    background-color: inherit; }
+  50% { transform: rotate(180deg) scale(1.5);
+    background-color: yellow; }
+  100% { transform: rotate(0deg) scale(1.15);
+    background-color: green; } }
+
+@keyframes moving-scissors { 0% { transform: translate(0, 0) scale(1);
+    background-color: inherit; }
+  50% { transform: translate(100px, 0) scale(1.1);
+    background-color: yellow; }
+  100% { transform: translate(0, 0) scale(1.15);
+    background-color: green; } }
+
+.container .first span { animation: moving-rock 1.5s 1; }
+
+.container .second span { display: inline-block; animation: moving-paper 1.5s 1; }
+
+.container .third span { display: inline-block; animation: moving-scissors 1.5s 1; }
+
+.container .btn { padding: 20px; max-width: 25%; width: 24%; max-height: 31%; height: 30%; margin: 5px; font-size: 30px; color: #fff; background-color: #00264d; border-radius: 12px; }
 
 .container i { font-size: 60px; }
 
 #js-resultsTableElement .col-xs-4 { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
 
-#js-resultsTableElement .col-xs-4 span { font-size: 20px; font-weight: 700; color: #800000; text-shadow: none; }
+#js-resultsTableElement .col-xs-4 span { font-size: 20px; font-weight: 700; color: #800000; text-shadow: none; text-transform: capitalize; }
+
+#js-resultsTableElement .col-xs-4 i { font-size: 60px; }
+
+#js-resultsTableElement .col-xs-4 .game-stopped { display: inline-block; color: #ffa31a; transition: 1s linear; transform: rotateY(360deg) scale(1.25); }
+
+#js-resultsTableElement .col-xs-4 h2 { font-size: 30px; font-weight: 900; color: #00264d; text-transform: capitalize; }
 
 #js-resultsTableElement .col-xs-5 { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
 
 #js-resultsTableElement .col-xs-5 span { font-size: 20px; font-weight: 700; color: #00264d; text-shadow: none; }
 
-#js-resultsTableElement .col-xs-5 i .fa .fa-trophy::before{ font-size: 120px; color: #ffa31a; transition: 1s linear; transform: rotateY(360deg) scale(1.25); }
-
-#js-resultsTableElement .col-xs-5 h2 { font-size: 30px; font-weight: 900; color: #00264d; text-transform: capitalize; }
-
 #js-resultsTableElement .col-xs-5 .badge { background-color: #ffa31a; color: #800000; padding: 20px; margin: 25px; font-size: 30px; }
 
-#js-resultsTableElement .col-xs-2 { font-size: 20px; font-weight: 700; color: #800000; }
+#js-resultsTableElement .col-xs-5 .col-xs-2 { font-size: 20px; font-weight: 700; color: #800000; }
