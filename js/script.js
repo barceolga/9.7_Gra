@@ -15,7 +15,7 @@ const playerPickElem = document.getElementById('js-playerPick'),
       playerResultElem = document.getElementById('js-playerResult'),
       computerResultElem = document.getElementById('js-computerResult');
 const gameWinner = document.getElementById('js-gameWinner'),
-      winnerIdentity = document.getElementById('js-winnerIdentity')
+      winnerIdentity = document.getElementById('js-winnerIdentity');
       gameTrophy = document.getElementById('js-gameTrophy');
 const playerIcon = document.getElementById('js-playerPickedIcon'),
       computerIcon = document.getElementById('js-computerPickedIcon');
@@ -111,7 +111,7 @@ function setIconStyle(playerPick, computerPick) {
 
 //WHO WON THE ROUNHD
 function setWinnerStyle(playerPick, computerPick) {
-      let wgsicon = 'fa fa-trophy ';
+      let wgsicon = `fa fa-trophy ${'game-stopped'}`;
       gameTrophy.className = wgsicon;
 }
 function checkRoundWinner(playerPick,computerPick) {
@@ -154,13 +154,13 @@ function setGamePoints() {
 function checkGameWinner() {
     gameWinner.innerHTML = '';
         if (player.score == 10) {
-            winnerIdentity.innerHTML = "And the winner is:"
+            winnerIdentity.innerHTML = "And the winner is:";
             gameWinner.innerHTML = "You! Hurray!";
             setWinnerStyle();
             setTimeout(function(){setGameElements()}, 3000);
             gameState = 'ended';
         } else if (computer.score == 10) {
-            winnerIdentity.innerHTML = "And the winner is:"
+            winnerIdentity.innerHTML = "And the winner is:";
             gameWinner.innerHTML = "Computer. Sorry:(.";
             setTimeout(function(){setGameElements()}, 3000);
             gameState = 'ended';
