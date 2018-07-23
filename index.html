@@ -17,13 +17,13 @@
               </div>
           <div class="row ">
             <div class="col-xs-4 first text-right">
-              <span class="label label-default">Rock</span>
+              <div class="label label-default"><img src="./images/005-rock.svg" alt="rock">Rock</div>
             </div>
             <div class="col-xs-3 second text-right">
-              <span class="label label-info">Paper</span>
+              <div class="label label-default"><img src="./images/004-sheet.svg" alt="paper">Paper</div>
             </div>
-            <div class="col-xs-5 third text-left">
-              <span class="label label-danger">Scissors</span>
+            <div class="col-xs-5 third text-center">
+              <div class="label label-default"><img src="./images/scissors.svg" alt="scissors">Scissors</div>
             </div>
           </div>
         </div>
@@ -58,22 +58,22 @@
         </div>
         <div id="js-resultsTableElement" class="container">
             <div class="row">
-                <div class="col-xs-5 text-center">
+                <div class="col-xs-4 text-center">
                     <span id="js-playerPoints" class="badge">
                       0
                     </span>
-                    <span id="js-playerName">
+                    <span class="name" id="js-playerName">
                       Player name
                     </span>
                 </div>
-                <div class="col-xs-2 text-center">
-                    VS.
+                <div class="col-xs-4 text-center" id="versus">
+                    vs.
                 </div>
-                <div class="col-xs-5 text-center">
+                <div class="col-xs-4 text-center">
                     <span id="js-computerPoints" class="badge">
                       0
                     </span>
-                    <span>
+                    <span class="name">
                     Computer
                   </span>
               </div>
@@ -108,14 +108,14 @@
         </div>
         <div class="row">
             <div class="col-xs-4 text-center">
-                <span id="js-playerResult">
+                <span class="name" id="js-playerResult">
                   Player Score
                 </span>
             </div>
             <div class="col-xs-4 text-center">
             </div>
             <div class="col-xs-4 text-center">
-                <span id="js-computerResult">
+                <span class="name" id="js-computerResult">
                   Computer Score
                 </span>
             </div>
