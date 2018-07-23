@@ -146,7 +146,7 @@
   font-weight: 700;
   color: #800000;
   text-shadow: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 #js-resultsTableElement .col-xs-4 i {
