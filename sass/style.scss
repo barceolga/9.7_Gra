@@ -14,53 +14,61 @@
     text-transform: uppercase;
     margin: 0px 0px 50px 0;
   }
-  .col-xs-4{
-    span {
-    color: #00264d;
-    display: inline-block;
-    }
-  }
 
   @keyframes moving-rock {
-    0% {transform:  translate(0,0) scale(1); background-color: inherit;}
-    50% {transform: translate(-145px, 0) scale(1.10); background-color: yellow;}
-    100% {transform: translate(0,0) scale(1.15); background-color: green;}
+    0% {transform:  rotate(0deg) scale(1); background-color: inherit;}
+    50% {transform: rotate(180deg) scale(1.10); background-color: #a3a375;}
+    100% {transform: rotate(0deg) scale(1.15); background-color: #537979;}
   }
 
   @keyframes moving-paper {
     0% {transform:  rotate(0deg) scale(1); background-color: inherit;}
-    50% {transform: rotate(180deg) scale(1.5); background-color: yellow;}
-    100% {transform: rotate(0deg) scale(1.15); background-color: green;}
+    50% {transform: rotate(180deg) scale(1.10); background-color: #a3a375;}
+    100% {transform: rotate(0deg) scale(1.15); background-color: #537979;}
   }
 
   @keyframes moving-scissors {
-    0% {transform:  translate(0,0) scale(1) ; background-color: inherit;}
-    50% {transform: translate(100px, 0) scale(1.10) ; background-color: yellow;}
-    100% {transform: translate(0,0) scale(1.15); background-color: green;}
+    0% {transform:  rotate(0deg) scale(1) ; background-color: inherit;}
+    50% {transform: rotate(180deg) scale(1.10) ; background-color: #a3a375;}
+    100% {transform: rotate(0deg) scale(1.15); background-color: #537979;}
   }
 
   .first {
-    span {
+    div {
       @extend .heading;
       animation: moving-rock 1.5s 1;
+      img {
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+        animation: moving-rock 1.5s 1;
+      }
     }
   }
   .second {
-    span {
+    div {
       @extend .heading;
-      display: inline-block;
       animation: moving-paper 1.5s 1;
+      img {
+        width: 50px;
+        height: 50px;
+        animation: moving-paper 1.5s 1;
+      }
     }
   }
   .third {
-    span {
+    div {
       @extend .heading;
-      display: inline-block;
       animation: moving-scissors 1.5s 1;
+      img {
+        width: 50px;
+        height: 50px;
+        animation: moving-scissors 1.5s 1;
+      }
     }
   }
   .btn {
-    padding: 20px;
+    padding: 15px 20px 15px 15px;
     max-width: 25%;
     width: 24%;
     max-height: 31%;
@@ -70,6 +78,20 @@
     color: #fff;
     background-color: #00264d;
     border-radius: 12px;
+    cursor: pointer;
+    transition: 0.5s linear;
+    &:hover{
+      color: #800000;
+      transform: scale(1.1);
+      font-weight: 800;
+      text-shadow: 2.5px 2.5px 4.5px #ffa31a;
+      background-color: #777;
+    }
+    &:focus{
+      border: none;
+      color: #995c00;
+      text-shadow: none;
+    }
   }
   i {
     font-size: 60px;
@@ -87,7 +109,7 @@
           font-weight: 700;
           color: #800000;
           text-shadow: none;
-          text-transform: capitalize;
+          text-transform: uppercase;
         }
 
         i {
@@ -105,29 +127,32 @@
           color: #00264d;
           text-transform: capitalize
         }
-  }
-  .col-xs-5 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    span {
+
+    .name {
         font-size: 20px;
         font-weight: 700;
         color: #00264d;
         text-shadow: none;
+        text-transform: uppercase;
         }
     .badge {
-        background-color: #ffa31a;
+        background: linear-gradient(to bottom right, #ffa31a, #e68a00, #995c00);
+        width: 70px;
+        height: 70px;
         color: #800000;
-        padding: 20px;
+        padding: 15px;
         margin: 25px;
-        font-size: 30px;
+        font-size: 35px;
+        border-top: 5px solid #ffa31a;
+        border-left:  5px solid #ffa31a;
+        border-bottom:  5px solid #4d2e00;
+        border-right:  5px solid #4d2e00;
       }
-    .col-xs-2 {
-       font-size: 20px;
-       font-weight: 700;
-       color: #800000;
-   }
- }
+    }
+ #versus {
+    font-size: 20px;
+    font-weight: 700;
+    color: #800000;
+    text-transform: uppercase;
+  }
 }
