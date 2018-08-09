@@ -1,69 +1,94 @@
+$project-red: #800000;
+$icon-rose: #ff4d4d;
+$project-blue: #00264d;
+$project-gold: #ffa31a;
+
+
 * {
   box-sizing: border-box;
 };
+
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("../images/background_1.jpeg");
+  background-size: cover;
+  height: 100%;
+  //transform: rotate(180deg);
+  //opacity: 0.50;
+}
 .container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 25px;
+  padding: 15px;
   .heading {
     font-size: 40px;
     font-weight: 900;
-    color: #800000;
-    text-shadow: 2.5px 2.5px 4.5px #ffa31a;
+    color: $project-red;
+    text-shadow: 2.5px 2.5px 4.5px $project-gold;
     text-transform: uppercase;
-    margin: 0px 0px 50px 0;
+    margin: 0px 0px 25px 0;
   }
 
   @keyframes moving-rock {
-    0% {transform:  rotate(0deg) scale(1); background-color: inherit;}
-    50% {transform: rotate(180deg) scale(1.10); background-color: #a3a375;}
-    100% {transform: rotate(0deg) scale(1.15); background-color: #537979;}
+    0% {transform:  rotate(0deg) scale(1);}
+    50% {transform: rotate(180deg) scale(1.10);}
+    100% {transform: rotate(0deg) scale(1.15);}
   }
 
   @keyframes moving-paper {
-    0% {transform:  rotate(0deg) scale(1); background-color: inherit;}
-    50% {transform: rotate(180deg) scale(1.10); background-color: #a3a375;}
-    100% {transform: rotate(0deg) scale(1.15); background-color: #537979;}
+    0% {transform:  rotate(0deg) scale(1);}
+    50% {transform: rotate(180deg) scale(1.10);}
+    100% {transform: rotate(0deg) scale(1.15);}
   }
 
   @keyframes moving-scissors {
-    0% {transform:  rotate(0deg) scale(1) ; background-color: inherit;}
-    50% {transform: rotate(180deg) scale(1.10) ; background-color: #a3a375;}
-    100% {transform: rotate(0deg) scale(1.15); background-color: #537979;}
+    0% {transform:  rotate(0deg) scale(1);}
+    50% {transform: rotate(180deg) scale(1.10);}
+    100% {transform: rotate(0deg) scale(1.15);}
   }
 
   .first {
     div {
       @extend .heading;
-      animation: moving-rock 1.5s 1;
-      img {
+      background-color: $icon-rose;
+      .game_icon{
         width: 50px;
         height: 50px;
-        margin-right: 5px;
-        animation: moving-rock 1.5s 1;
+        &.animated{
+          animation: moving-rock  1.5s 1;
+        }
       }
     }
   }
   .second {
     div {
       @extend .heading;
-      animation: moving-paper 1.5s 1;
-      img {
+      background-color: $icon-rose;
+      .game_icon{
         width: 50px;
         height: 50px;
-        animation: moving-paper 1.5s 1;
+        &.animated{
+          animation: moving-paper 1.5s 1;
+        }
       }
     }
   }
   .third {
     div {
       @extend .heading;
-      animation: moving-scissors 1.5s 1;
-      img {
+      background-color: $icon-rose;
+      .game_icon{
         width: 50px;
         height: 50px;
-        animation: moving-scissors 1.5s 1;
+        &.animated{
+          animation: moving-scissors 1.5s 1;
+        }
       }
     }
   }
@@ -76,25 +101,26 @@
     margin: 5px;
     font-size: 30px;
     color: #fff;
-    background-color: #00264d;
+    background-color: $project-blue;
     border-radius: 12px;
     cursor: pointer;
     transition: 0.5s linear;
     &:hover{
-      color: #800000;
+      color: $project-red;
       transform: scale(1.1);
       font-weight: 800;
-      text-shadow: 2.5px 2.5px 4.5px #ffa31a;
+      text-shadow: 2.5px 2.5px 4.5px $project-gold;
       background-color: #777;
     }
     &:focus{
       border: none;
-      color: #995c00;
+      color: $project-gold;
       text-shadow: none;
     }
   }
   i {
     font-size: 60px;
+    color: $project-blue;
   }
 }
 
@@ -107,7 +133,7 @@
         span {
           font-size: 20px;
           font-weight: 700;
-          color: #800000;
+          color: $project-red;
           text-shadow: none;
           text-transform: uppercase;
         }
@@ -115,44 +141,55 @@
         i {
           font-size: 60px;
         }
-        .game-stopped {
+        .game-stopped-winner {
           display: inline-block;
-          color: #ffa31a;
+          color: $project-gold;
+          transition: 1s linear;
+          transform: rotateY(360deg) scale(0.90);
+        }
+        .game-stopped-looser {
+          display: inline-block;
+          color: $project-red;
           transition: 1s linear;
           transform: rotateY(360deg) scale(1.25);
         }
         h2 {
-          font-size: 30px;
+          font-size: 20px;
           font-weight: 900;
-          color: #00264d;
-          text-transform: capitalize
+          color: $project-blue;
+          text-transform: capitalize;
         }
 
     .name {
         font-size: 20px;
         font-weight: 700;
-        color: #00264d;
+        color: $project-blue;
         text-shadow: none;
         text-transform: uppercase;
         }
+
     .badge {
-        background: linear-gradient(to bottom right, #ffa31a, #e68a00, #995c00);
+        background: linear-gradient(to bottom right, $project-gold, #e68a00, #995c00);
         width: 70px;
         height: 70px;
-        color: #800000;
+        color: $project-red;
         padding: 15px;
         margin: 25px;
         font-size: 35px;
-        border-top: 5px solid #ffa31a;
-        border-left:  5px solid #ffa31a;
+        border-top: 5px solid $project-gold;
+        border-left:  5px solid $project-gold;
         border-bottom:  5px solid #4d2e00;
         border-right:  5px solid #4d2e00;
+      }
+    .score {
+      @extend .name;
+      color: $project-red;
       }
     }
  #versus {
     font-size: 20px;
     font-weight: 700;
-    color: #800000;
+    color: $project-red;
     text-transform: uppercase;
   }
 }
