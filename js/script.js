@@ -1,5 +1,8 @@
 //CONSTANTS AND VARIABLES FOR game
 /*jshint esversion: 6*/
+const gameIcon1 = document.getElementById('js-game_icon-1'),
+      gameIcon2 = document.getElementById('js-game_icon-2'),
+      gameIcon3 = document.getElementById('js-game_icon-3');
 const newGameBtn = document.getElementById('js-newGameButton');
 const pickRock = document.getElementById('js-playerPick_rock'),
       pickPaper = document.getElementById('js-playerPick_paper'),
@@ -34,13 +37,20 @@ pickScissors.addEventListener('click', function() { playerPick('scissors'); });
 
 // SET GAME STRUCTURE
 
+function setWelcomeStyle() {
+  let welcomeAnimation = `game_icon ${'animated'}`;
+  gameIcon1.className = welcomeAnimation;
+  gameIcon2.className = welcomeAnimation;
+  gameIcon3.className = welcomeAnimation;
+}
+
 function setGameElements() {
   switch(gameState) {
     case 'started':
         newGameElem.style.display = 'none';
         pickElem.style.display = 'block';
         resultsElem.style.display = 'block';
-
+        setWelcomeStyle();
       break;
     case 'ended':
         newGameElem.style.display = 'block';
@@ -64,16 +74,19 @@ function setGameElements() {
 function newGame() {
   player.name = prompt('Please enter your name', 'Player name');
   if (player.name) {
-      player.score =0;
+      player.score = 0;
       computer.score = 0;
-      if ((player.score ==0) && (computer.score == 0)) {
+      if ((player.score == 0) && (computer.score == 0)) {
           playerResultElem.innerHTML = "Player Score";
           computerResultElem.innerHTML = "Computer Score";
           playerPickElem.innerHTML = "Player selection";
           computerPickElem.innerHTML = "Computer selection";
-          gameWinner.innerHTML = "";
+          gameWinner.innerHTML = '';
+          gameTrophy.className = '';
+          winnerIdentity.innerHTML = '';
+          playerIcon.style.display = 'block';
+          computerIcon.style.display = 'block';
       }
-
     gameState = 'started';
     setGameElements();
     setIconStyle();
@@ -110,10 +123,16 @@ function setIconStyle(playerPick, computerPick) {
 }
 
 //WHO WON THE ROUNHD
-function setWinnerStyle(playerPick, computerPick) {
-      let wgsicon = `fa fa-trophy ${'game-stopped'}`;
+function setWinnerStyle() {
+      let wgsicon = `fa fa-trophy ${'game-stopped-winner'}`;
       gameTrophy.className = wgsicon;
 }
+
+function setLooserStyle() {
+      let lgsicon = `fa fa-frown-o ${'game-stopped-looser'}`;
+      gameTrophy.className = lgsicon;
+}
+
 function checkRoundWinner(playerPick,computerPick) {
     playerResultElem.innerHTML = computerResultElem.innerHTML = '';
     gameWinner.innerHTML = '';
@@ -154,15 +173,22 @@ function setGamePoints() {
 function checkGameWinner() {
     gameWinner.innerHTML = '';
         if (player.score == 10) {
+            playerResultElem.innerHTML = '';
+            playerIcon.style.display = 'none';
+            computerIcon.style.display = 'none';
             winnerIdentity.innerHTML = "And the winner is:";
             gameWinner.innerHTML = "You! Hurray!";
             setWinnerStyle();
-            setTimeout(function(){setGameElements()}, 3000);
+            setTimeout(function(){setGameElements()}, 4000);
             gameState = 'ended';
         } else if (computer.score == 10) {
+            computerResultElem.innerHTML = '';
+            playerIcon.style.display = 'none';
+            computerIcon.style.display = 'none';
             winnerIdentity.innerHTML = "And the winner is:";
             gameWinner.innerHTML = "Computer. Sorry:(.";
-            setTimeout(function(){setGameElements()}, 3000);
+            setLooserStyle();
+            setTimeout(function(){setGameElements()}, 4000);
             gameState = 'ended';
         }
 }
