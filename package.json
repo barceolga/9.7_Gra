@@ -28,11 +28,11 @@
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser": "^0.2.6",
-    "browser-sync": "^2.24.1",
+    "browser-sync": "^2.24.6",
     "globstar": "^1.0.0",
     "jshint": "^2.9.5",
     "mkdirp": "^0.5.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.3",
     "nu-html-checker": "^0.1.0",
     "onchange": "^3.3.0"
   },
@@ -40,6 +40,7 @@
     "hoek": "^5.0.3",
     "lodash": "^4.17.10",
     "npm-run-all": "^4.1.2",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "superagent": "^3.8.3"
   }
 }
