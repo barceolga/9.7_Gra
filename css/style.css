@@ -1,65 +1,634 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body { position: fixed; top: 0; left: 0; right: 0; z-index: -1; display: block; background-image: url("../images/background_1.jpeg"); background-size: cover; height: 100%; }
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("../images/background_1.jpeg");
+  background-size: cover;
+  height: 100%;
+}
 
-.container { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: start; justify-content: flex-start; padding: 15px; }
+.container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  padding: 15px;
+}
 
-.container .heading, .container .first div, .container .second div, .container .third div { font-size: 40px; font-weight: 900; color: #800000; text-shadow: 2.5px 2.5px 4.5px #ffa31a; text-transform: uppercase; margin: 0px 0px 25px 0; }
+.container .heading, .container .first div, .container .second div, .container .third div {
+  font-size: 40px;
+  font-weight: 900;
+  color: #800000;
+  text-shadow: 2.5px 2.5px 4.5px #ffa31a;
+  text-transform: uppercase;
+  margin: 0px 0px 25px 0;
+}
 
-@keyframes moving-rock { 0% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(180deg) scale(1.1); }
-  100% { transform: rotate(0deg) scale(1.15); } }
+@keyframes moving-rock {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.15);
+  }
+}
 
-@keyframes moving-paper { 0% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(180deg) scale(1.1); }
-  100% { transform: rotate(0deg) scale(1.15); } }
+@keyframes moving-paper {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.15);
+  }
+}
 
-@keyframes moving-scissors { 0% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(180deg) scale(1.1); }
-  100% { transform: rotate(0deg) scale(1.15); } }
+@keyframes moving-scissors {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.15);
+  }
+}
 
-.container .first div { background-color: #ff4d4d; }
+.container .first div {
+  background-color: #ff4d4d;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
 
-.container .first div .game_icon { width: 50px; height: 50px; }
+.container .first div .game_icon {
+  width: 50px;
+  height: 50px;
+}
 
-.container .first div .game_icon.animated { animation: moving-rock  1.5s 1; }
+.container .first div .game_icon.animated {
+  animation: moving-rock  1.5s 1;
+}
 
-.container .second div { background-color: #ff4d4d; }
+.container .second div {
+  background-color: #ff4d4d;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
 
-.container .second div .game_icon { width: 50px; height: 50px; }
+.container .second div .game_icon {
+  width: 50px;
+  height: 50px;
+}
 
-.container .second div .game_icon.animated { animation: moving-paper 1.5s 1; }
+.container .second div .game_icon.animated {
+  animation: moving-paper 1.5s 1;
+}
 
-.container .third div { background-color: #ff4d4d; }
+.container .third div {
+  background-color: #ff4d4d;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
 
-.container .third div .game_icon { width: 50px; height: 50px; }
+.container .third div .game_icon {
+  width: 50px;
+  height: 50px;
+}
 
-.container .third div .game_icon.animated { animation: moving-scissors 1.5s 1; }
+.container .third div .game_icon.animated {
+  animation: moving-scissors 1.5s 1;
+}
 
-.container .btn { padding: 15px 20px 15px 15px; max-width: 25%; width: 24%; max-height: 31%; height: 30%; margin: 5px; font-size: 30px; color: #fff; background-color: #00264d; border-radius: 12px; cursor: pointer; transition: 0.5s linear; }
+.container .btn {
+  padding: 15px 20px 15px 15px;
+  max-width: 25%;
+  width: 24%;
+  max-height: 31%;
+  height: 30%;
+  margin: 5px;
+  font-size: 30px;
+  color: #fff;
+  background-color: #00264d;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.5s linear;
+}
 
-.container .btn:hover { color: #800000; transform: scale(1.1); font-weight: 800; text-shadow: 2.5px 2.5px 4.5px #ffa31a; background-color: #777; }
+.container .btn:hover {
+  color: #800000;
+  transform: scale(1.1);
+  font-weight: 800;
+  text-shadow: 2.5px 2.5px 4.5px #ffa31a;
+  background-color: #777;
+}
 
-.container .btn:focus { border: none; color: #ffa31a; text-shadow: none; }
+.container .btn:focus {
+  border: none;
+  color: #ffa31a;
+  text-shadow: none;
+}
 
-.container i { font-size: 60px; color: #00264d; }
+.container i {
+  font-size: 60px;
+  color: #00264d;
+}
 
-#js-resultsTableElement .col-xs-4 { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
+#js-resultsTableElement .col-lg-4 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
 
-#js-resultsTableElement .col-xs-4 span { font-size: 20px; font-weight: 700; color: #800000; text-shadow: none; text-transform: uppercase; }
+#js-resultsTableElement .col-lg-4 span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #800000;
+  text-shadow: none;
+  text-transform: uppercase;
+}
 
-#js-resultsTableElement .col-xs-4 i { font-size: 60px; }
+#js-resultsTableElement .col-lg-4 i {
+  font-size: 60px;
+}
 
-#js-resultsTableElement .col-xs-4 .game-stopped-winner { display: inline-block; color: #ffa31a; transition: 1s linear; transform: rotateY(360deg) scale(0.9); }
+#js-resultsTableElement .col-lg-4 .game-stopped-winner {
+  display: inline-block;
+  color: #ffa31a;
+  transition: 1s linear;
+  transform: rotateY(360deg) scale(0.9);
+}
 
-#js-resultsTableElement .col-xs-4 .game-stopped-looser { display: inline-block; color: #800000; transition: 1s linear; transform: rotateY(360deg) scale(1.25); }
+#js-resultsTableElement .col-lg-4 .game-stopped-looser {
+  display: inline-block;
+  color: #800000;
+  transition: 1s linear;
+  transform: rotateY(360deg) scale(1.25);
+}
 
-#js-resultsTableElement .col-xs-4 h2 { font-size: 20px; font-weight: 900; color: #00264d; text-transform: capitalize; }
+#js-resultsTableElement .col-lg-4 h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #00264d;
+  text-transform: capitalize;
+}
 
-#js-resultsTableElement .col-xs-4 .name, #js-resultsTableElement .col-xs-4 .score { font-size: 20px; font-weight: 700; color: #00264d; text-shadow: none; text-transform: uppercase; }
+#js-resultsTableElement .col-lg-4 .name, #js-resultsTableElement .col-lg-4 .score {
+  font-size: 20px;
+  font-weight: 700;
+  color: #00264d;
+  text-shadow: none;
+  text-transform: uppercase;
+}
 
-#js-resultsTableElement .col-xs-4 .badge { background: linear-gradient(to bottom right, #ffa31a, #e68a00, #995c00); width: 70px; height: 70px; color: #800000; padding: 15px; margin: 25px; font-size: 35px; border-top: 5px solid #ffa31a; border-left: 5px solid #ffa31a; border-bottom: 5px solid #4d2e00; border-right: 5px solid #4d2e00; }
+#js-resultsTableElement .col-lg-4 .badge {
+  background: linear-gradient(to bottom right, #ffa31a, #e68a00, #995c00);
+  width: 70px;
+  height: 70px;
+  color: #800000;
+  padding: 15px;
+  margin: 25px;
+  font-size: 35px;
+  border-top: 5px solid #ffa31a;
+  border-left: 5px solid #ffa31a;
+  border-bottom: 5px solid #4d2e00;
+  border-right: 5px solid #4d2e00;
+}
 
-#js-resultsTableElement .col-xs-4 .score { color: #800000; }
+#js-resultsTableElement .col-lg-4 .score {
+  color: #800000;
+}
 
-#js-resultsTableElement #versus { font-size: 20px; font-weight: 700; color: #800000; text-transform: uppercase; }
+#js-resultsTableElement #versus {
+  font-size: 20px;
+  font-weight: 700;
+  color: #800000;
+  text-transform: uppercase;
+}
+
+@media (max-width: 575px) and (orientation: portrait) {
+  .container .heading, .container .first div, .container .second div, .container .third div {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
+  @keyframes moving-rock {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1.15);
+    }
+  }
+  @keyframes moving-paper {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1.15);
+    }
+  }
+  @keyframes moving-scissors {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1.15);
+    }
+  }
+  .container .label {
+    padding: 5px;
+  }
+  .container .first {
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+  .container .first div.label {
+    font-size: 16px;
+    width: 100%;
+  }
+  .container .first div.label .game_icon {
+    width: 20px;
+    height: 20px;
+  }
+  .container .first div.label .game_icon.animated {
+    animation: moving-rock  1.5s 1;
+  }
+  .container .second {
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    margin: 0;
+  }
+  .container .second div.label {
+    font-size: 16px;
+    width: 100%;
+  }
+  .container .second div.label .game_icon {
+    width: 20px;
+    height: 20px;
+  }
+  .container .second div.label .game_icon.animated {
+    animation: moving-paper  1.5s 1;
+  }
+  .container .third {
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin: 0;
+  }
+  .container .third div {
+    font-size: 16px;
+  }
+  .container .third div .game_icon {
+    width: 20px;
+    height: 20px;
+  }
+  .container .third div .game_icon.animated {
+    animation: moving-scissors  1.5s 1;
+  }
+  .container .btn {
+    padding: 15px 20px 15px 15px;
+    max-width: 50%;
+    width: auto;
+    max-height: 25%;
+    height: 24%;
+    margin: 5px;
+    font-size: 20px;
+  }
+  .container i {
+    font-size: 20px;
+  }
+  #js-resultsTableElement .col-xs-4 .name, #js-resultsTableElement .col-xs-4 .col-lg-4 .score, #js-resultsTableElement .col-lg-4 .col-xs-4 .score {
+    font-size: 16px;
+  }
+  #js-resultsTableElement .col-xs-4 span {
+    font-size: 16px;
+  }
+  #js-resultsTableElement .col-xs-4 .score {
+    font-size: 16px;
+  }
+  #js-resultsTableElement .col-xs-4 .badge {
+    width: 35px;
+    height: 35px;
+    padding: 7.5px;
+    margin: 12.5px;
+    font-size: 18px;
+    border-top: 2.5px solid #ffa31a;
+    border-left: 2.5px solid #ffa31a;
+    border-bottom: 2.5px solid #4d2e00;
+    border-right: 2.5px solid #4d2e00;
+  }
+  #js-resultsTableElement .col-xs-4 i {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) and (orientation: landscape) {
+  .container {
+    padding: 0px;
+  }
+  .container .heading, .container .first div, .container .second div, .container .third div {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
+  @keyframes moving-rock {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1.15);
+    }
+  }
+  @keyframes moving-paper {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1.15);
+    }
+  }
+  @keyframes moving-scissors {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1.15);
+    }
+  }
+  .container .label {
+    padding: 5px;
+  }
+  .container .first {
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+  .container .first div {
+    font-size: 18px;
+  }
+  .container .first div .game_icon {
+    width: 20px;
+    height: 20px;
+  }
+  .container .first div .game_icon.animated {
+    animation: moving-rock  1.5s 1;
+  }
+  .container .second {
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin: 0;
+  }
+  .container .second div {
+    font-size: 18px;
+  }
+  .container .second div .game_icon {
+    width: 20px;
+    height: 20px;
+  }
+  .container .second div .game_icon.animated {
+    animation: moving-paper  1.5s 1;
+  }
+  .container .third {
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    margin: 0;
+  }
+  .container .third div {
+    font-size: 18px;
+  }
+  .container .third div .game_icon {
+    width: 20px;
+    height: 20px;
+  }
+  .container .third div .game_icon.animated {
+    animation: moving-scissors  1.5s 1;
+  }
+  .container .btn {
+    padding: 15px 20px 15px 15px;
+    max-width: 50%;
+    width: auto;
+    max-height: 25%;
+    height: 24%;
+    margin: 5px;
+    font-size: 20px;
+  }
+  .container i {
+    font-size: 20px;
+  }
+  #js-resultsTableElement .col-sm-4 .name, #js-resultsTableElement .col-sm-4 .col-lg-4 .score, #js-resultsTableElement .col-lg-4 .col-sm-4 .score {
+    font-size: 16px;
+  }
+  #js-resultsTableElement .col-sm-4 span {
+    font-size: 16px;
+  }
+  #js-resultsTableElement .col-sm-4 .badge {
+    width: 35px;
+    height: 35px;
+    padding: 7.5px;
+    margin: 12.5px;
+    font-size: 18px;
+    border-top: 2.5px solid #ffa31a;
+    border-left: 2.5px solid #ffa31a;
+    border-bottom: 2.5px solid #4d2e00;
+    border-right: 2.5px solid #4d2e00;
+  }
+  #js-resultsTableElement .col-sm-4 .score {
+    font-size: 16px;
+  }
+  #js-resultsTableElement .col-sm-4 i {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    padding: 15px;
+  }
+  .container .heading, .container .first div, .container .second div, .container .third div {
+    font-size: 30px;
+    letter-spacing: 0.5px;
+  }
+  @keyframes moving-rock {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1.15);
+    }
+  }
+  @keyframes moving-paper {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1.15);
+    }
+  }
+  @keyframes moving-scissors {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1.15);
+    }
+  }
+  .container .label {
+    padding: 5px;
+  }
+  .container .first {
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+  .container .first div {
+    font-size: 30px;
+  }
+  .container .first div .game_icon {
+    width: 30px;
+    height: 30px;
+  }
+  .container .first div .game_icon.animated {
+    animation: moving-rock  1.5s 1;
+  }
+  .container .second {
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin: 0;
+  }
+  .container .second div {
+    font-size: 30px;
+  }
+  .container .second div .game_icon {
+    width: 30px;
+    height: 30px;
+  }
+  .container .second div .game_icon.animated {
+    animation: moving-paper  1.5s 1;
+  }
+  .container .third {
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    margin: 0;
+  }
+  .container .third div {
+    font-size: 30px;
+  }
+  .container .third div .game_icon {
+    width: 30px;
+    height: 30px;
+  }
+  .container .third div .game_icon.animated {
+    animation: moving-scissors  1.5s 1;
+  }
+  .container .btn {
+    padding: 15px 20px 15px 15px;
+    max-width: 50%;
+    width: auto;
+    max-height: 31%;
+    height: 30%;
+    margin: 5px;
+    font-size: 30px;
+  }
+  .container i {
+    font-size: 30px;
+  }
+  #js-resultsTableElement .col-sm-4 .name, #js-resultsTableElement .col-sm-4 .col-lg-4 .score, #js-resultsTableElement .col-lg-4 .col-sm-4 .score {
+    font-size: 20px;
+  }
+  #js-resultsTableElement .col-sm-4 span {
+    font-size: 20px;
+  }
+  #js-resultsTableElement .col-sm-4 .badge {
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    margin: 18px;
+    font-size: 25px;
+    border-top: 2.5px solid #ffa31a;
+    border-left: 2.5px solid #ffa31a;
+    border-bottom: 2.5px solid #4d2e00;
+    border-right: 2.5px solid #4d2e00;
+  }
+  #js-resultsTableElement .col-sm-4 .score {
+    font-size: 20px;
+  }
+  #js-resultsTableElement .col-sm-4 i {
+    font-size: 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

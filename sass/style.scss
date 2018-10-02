@@ -8,6 +8,11 @@ $project-gold: #ffa31a;
   box-sizing: border-box;
 };
 
+$phone_portrait: "(max-width: 575px) and (orientation: portrait)";
+$phone_landscape: "(min-width: 576px) and (max-width: 767px) and (orientation: landscape)";
+$tablet: "(min-width: 768px) and (max-width: 991px)";
+$desktop: "(min-width: 992px)";
+
 body {
   position: fixed;
   top: 0;
@@ -57,6 +62,8 @@ body {
     div {
       @extend .heading;
       background-color: $icon-rose;
+      display: flex;
+      justify-content: center;
       .game_icon{
         width: 50px;
         height: 50px;
@@ -70,6 +77,8 @@ body {
     div {
       @extend .heading;
       background-color: $icon-rose;
+      display: flex;
+      justify-content: center;
       .game_icon{
         width: 50px;
         height: 50px;
@@ -83,6 +92,8 @@ body {
     div {
       @extend .heading;
       background-color: $icon-rose;
+      display: flex;
+      justify-content: center;
       .game_icon{
         width: 50px;
         height: 50px;
@@ -125,7 +136,7 @@ body {
 }
 
 #js-resultsTableElement {
-  .col-xs-4 {
+  .col-lg-4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -193,3 +204,354 @@ body {
     text-transform: uppercase;
   }
 }
+
+  @media#{$phone_portrait} {
+    .container{
+      .heading {
+        font-size: 20px;
+        letter-spacing: 0.5px
+      }
+      @keyframes moving-rock {
+        0% {transform:  rotate(0deg) scale(1);}
+        50% {transform: rotate(180deg) scale(1.10);}
+        100% {transform: rotate(0deg) scale(1.15);}
+      }
+
+      @keyframes moving-paper {
+        0% {transform:  rotate(0deg) scale(1);}
+        50% {transform: rotate(180deg) scale(1.10);}
+        100% {transform: rotate(0deg) scale(1.15);}
+      }
+
+      @keyframes moving-scissors {
+        0% {transform:  rotate(0deg) scale(1);}
+        50% {transform: rotate(180deg) scale(1.10);}
+        100% {transform: rotate(0deg) scale(1.15);}
+      }
+      .label {
+        padding: 5px;
+      }
+      .first {
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        div.label {
+          font-size: 16px;
+          width: 100%;
+          .game_icon {
+            width: 20px;
+            height: 20px;
+            &.animated {
+              animation: moving-rock  1.5s 1;
+            }
+          }
+        }
+      }
+      .second {
+          margin: 0 auto;
+          display: flex;
+          justify-content: flex-end;
+          margin: 0;
+          div.label {
+            font-size: 16px;
+            width: 100%;
+            .game_icon {
+              width: 20px;
+              height: 20px;
+              &.animated {
+                animation: moving-paper  1.5s 1;
+              }
+            }
+          }
+        }
+        .third {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            div {
+              font-size: 16px;
+              .game_icon {
+                width: 20px;
+                height: 20px;
+                &.animated {
+                  animation: moving-scissors  1.5s 1;
+                }
+            }
+          }
+        }
+        .btn {
+          padding: 15px 20px 15px 15px;
+          max-width: 50%;
+          width: auto;
+          max-height: 25%;
+          height: 24%;
+          margin: 5px;
+          font-size: 20px;
+        }
+
+        i {
+          font-size: 20px;
+        }
+    }
+    #js-resultsTableElement {
+      .col-xs-4 {
+        .name {
+          font-size: 16px;
+        }
+        span {
+          font-size: 16px;
+        }
+        .score {
+          font-size: 16px;
+        }
+        .badge {
+            width: 35px;
+            height: 35px;
+            padding: 7.5px;
+            margin: 12.5px;
+            font-size: 18px;
+            border-top: 2.5px solid $project-gold;
+            border-left:  2.5px solid $project-gold;
+            border-bottom:  2.5px solid #4d2e00;
+            border-right:  2.5px solid #4d2e00;
+        }
+        i {
+            font-size: 30px;
+        }
+      }
+    }
+  }
+
+  @media#{$phone_landscape} {
+    .container {
+      padding: 0px;
+      .heading {
+        font-size: 20px;
+        letter-spacing: 0.5px
+      }
+      @keyframes moving-rock {
+        0% {transform:  rotate(0deg) scale(1);}
+        50% {transform: rotate(180deg) scale(1.10);}
+        100% {transform: rotate(0deg) scale(1.15);}
+      }
+
+      @keyframes moving-paper {
+        0% {transform:  rotate(0deg) scale(1);}
+        50% {transform: rotate(180deg) scale(1.10);}
+        100% {transform: rotate(0deg) scale(1.15);}
+      }
+
+      @keyframes moving-scissors {
+        0% {transform:  rotate(0deg) scale(1);}
+        50% {transform: rotate(180deg) scale(1.10);}
+        100% {transform: rotate(0deg) scale(1.15);}
+      }
+      .label {
+        padding: 5px;
+      }
+      .first {
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        div {
+          font-size: 18px;
+          .game_icon {
+            width: 20px;
+            height: 20px;
+            &.animated {
+              animation: moving-rock  1.5s 1;
+            }
+          }
+        }
+      }
+      .second {
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          div {
+            font-size: 18px;
+            .game_icon {
+              width: 20px;
+              height: 20px;
+              &.animated {
+                animation: moving-paper  1.5s 1;
+              }
+            }
+          }
+        }
+        .third {
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+            div {
+              font-size: 18px;
+              .game_icon {
+                width: 20px;
+                height: 20px;
+                &.animated {
+                  animation: moving-scissors  1.5s 1;
+                }
+            }
+          }
+        }
+        .btn {
+          padding: 15px 20px 15px 15px;
+          max-width: 50%;
+          width: auto;
+          max-height: 25%;
+          height: 24%;
+          margin: 5px;
+          font-size: 20px;
+        }
+
+        i {
+          font-size: 20px;
+        }
+    }
+    #js-resultsTableElement {
+      .col-sm-4 {
+        .name {
+          font-size: 16px;
+        }
+        span {
+          font-size: 16px;
+        }
+        .badge {
+            width: 35px;
+            height: 35px;
+            padding: 7.5px;
+            margin: 12.5px;
+            font-size: 18px;
+            border-top: 2.5px solid $project-gold;
+            border-left:  2.5px solid $project-gold;
+            border-bottom:  2.5px solid #4d2e00;
+            border-right:  2.5px solid #4d2e00;
+          }
+        .score {
+          font-size: 16px;
+        }
+        i {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  @media#{$tablet} {
+    .container {
+      padding: 15px;
+      .heading {
+        font-size: 30px;
+        letter-spacing: 0.5px
+      }
+      @keyframes moving-rock {
+        0% {transform:  rotate(0deg) scale(1);}
+        50% {transform: rotate(180deg) scale(1.10);}
+        100% {transform: rotate(0deg) scale(1.15);}
+      }
+
+      @keyframes moving-paper {
+        0% {transform:  rotate(0deg) scale(1);}
+        50% {transform: rotate(180deg) scale(1.10);}
+        100% {transform: rotate(0deg) scale(1.15);}
+      }
+
+      @keyframes moving-scissors {
+        0% {transform:  rotate(0deg) scale(1);}
+        50% {transform: rotate(180deg) scale(1.10);}
+        100% {transform: rotate(0deg) scale(1.15);}
+      }
+      .label {
+        padding: 5px;
+      }
+      .first {
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        div {
+          font-size: 30px;
+          .game_icon {
+            width: 30px;
+            height: 30px;
+            &.animated {
+              animation: moving-rock  1.5s 1;
+            }
+          }
+        }
+      }
+      .second {
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          div {
+            font-size: 30px;
+            .game_icon {
+              width: 30px;
+              height: 30px;
+              &.animated {
+                animation: moving-paper  1.5s 1;
+              }
+            }
+          }
+        }
+        .third {
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+            div {
+              font-size: 30px;
+              .game_icon {
+                width: 30px;
+                height: 30px;
+                &.animated {
+                  animation: moving-scissors  1.5s 1;
+                }
+            }
+          }
+        }
+        .btn {
+          padding: 15px 20px 15px 15px;
+          max-width: 50%;
+          width: auto;
+          max-height: 31%;
+          height: 30%;
+          margin: 5px;
+          font-size: 30px;
+        }
+
+        i {
+          font-size: 30px;
+        }
+    }
+    #js-resultsTableElement {
+      .col-sm-4 {
+        .name {
+          font-size: 20px;
+        }
+        span {
+          font-size: 20px;
+        }
+        .badge {
+            width: 50px;
+            height: 50px;
+            padding: 12px;
+            margin: 18px;
+            font-size: 25px;
+            border-top: 2.5px solid $project-gold;
+            border-left:  2.5px solid $project-gold;
+            border-bottom:  2.5px solid #4d2e00;
+            border-right:  2.5px solid #4d2e00;
+          }
+        .score {
+          font-size: 20px;
+        }
+        i {
+          font-size: 30px;
+        }
+      }
+    }
+  }
