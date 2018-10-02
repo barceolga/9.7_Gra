@@ -9,7 +9,7 @@ body {
   right: 0;
   z-index: -1;
   display: block;
-  background-image: url("../images/background_1.jpeg");
+  background-image: url("../images/Mosaic_background.png");
   background-size: cover;
   height: 100%;
 }
