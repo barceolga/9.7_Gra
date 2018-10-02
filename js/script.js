@@ -77,6 +77,9 @@ function newGame() {
       player.score = 0;
       computer.score = 0;
       if ((player.score == 0) && (computer.score == 0)) {
+          pickRock.disabled = false;
+          pickPaper.disabled = false;
+          pickScissors.disabled = false;
           playerResultElem.innerHTML = "Player Score";
           computerResultElem.innerHTML = "Computer Score";
           playerPickElem.innerHTML = "Player selection";
@@ -176,6 +179,9 @@ function checkGameWinner() {
             playerResultElem.innerHTML = '';
             playerIcon.style.display = 'none';
             computerIcon.style.display = 'none';
+            pickRock.disabled = true;
+            pickPaper.disabled = true;
+            pickScissors.disabled = true;
             winnerIdentity.innerHTML = "And the winner is:";
             setTimeout(function(){
             winnerIdentity.innerHTML = '';
