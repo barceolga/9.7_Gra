@@ -184,7 +184,7 @@ function checkGameWinner() {
             }, 2000);
             //gameWinner.innerHTML = "You! Hurray!";
             //setWinnerStyle();
-            setTimeout(function(){setGameElements()}, 6000);
+            setTimeout(function(){setGameElements();}, 6000);
             gameState = 'ended';
         } else if (computer.score == 10) {
             computerResultElem.innerHTML = '';
@@ -196,7 +196,7 @@ function checkGameWinner() {
             gameWinner.innerHTML = "Computer. Sorry:(";
             setLooserStyle();
             }, 2000);
-            setTimeout(function(){setGameElements()}, 6000);
+            setTimeout(function(){setGameElements();}, 6000);
             gameState = 'ended';
         }
 }
