@@ -19,7 +19,7 @@ html {
     right: 0;
     top: 0;
     bottom: 0;
-    background-image: url("../images/mosaic.png");
+    background-image: url("../images/mosaic_big.png");
     background-size: cover;
     height: 100%;
 }
@@ -65,7 +65,8 @@ body {
   .first {
     div {
       @extend .heading;
-      background-color: $icon-rose;
+      text-shadow: none;
+      background-color: $project-gold;
       display: flex;
       justify-content: center;
       .game_icon {
@@ -81,7 +82,8 @@ body {
   .second {
     div {
       @extend .heading;
-      background-color: $icon-rose;
+      text-shadow: none;
+      background-color: $project-gold;
       display: flex;
       justify-content: center;
       .game_icon {
@@ -96,7 +98,8 @@ body {
   .third {
     div {
       @extend .heading;
-      background-color: $icon-rose;
+      text-shadow: none;
+      background-color: $project-gold;
       display: flex;
       justify-content: center;
       .game_icon {
@@ -169,13 +172,14 @@ body {
           color: $project-red;
           transition: 1s linear;
           transform: rotateY(360deg) scale(1.25);
-          background-color: #777;
+          background-color: $project-gold;
         }
         h2 {
           font-size: 20px;
           font-weight: 900;
           color: $project-blue;
-          text-transform: capitalize;
+          text-shadow: 1px 0;
+          text-transform: uppercase;
         }
         .game_winner {
           color: $project-red;
@@ -220,6 +224,12 @@ body {
 }
 
   @media#{$phone_portrait} {
+    html {
+        background-image: url("../images/mosaic_phone_portrait.png");
+        background-size: cover;
+        height: 100%;
+    }
+
     .container{
       .heading {
         font-size: 20px;
@@ -342,6 +352,11 @@ body {
   }
 
   @media#{$phone_landscape} {
+    html {
+        background-image: url("../images/mosaic_phone_landscape.png");
+        background-size: cover;
+        height: 100%;
+    }
     .container {
       padding: 0px;
       .heading {
