@@ -8,8 +8,8 @@ $project-gold: #ffa31a;
   box-sizing: border-box;
 };
 
-$phone_portrait: "(max-width: 575px) and (orientation: portrait)";
-$phone_landscape: "(min-width: 576px) and (max-width: 767px) and (orientation: landscape)";
+$phone_portrait: "(max-width: 767px) and (orientation: portrait)";
+$phone_landscape: "(max-width: 767px) and (orientation: landscape)";
 $tablet: "(min-width: 768px) and (max-width: 991px)";
 $desktop: "(min-width: 992px)";
 
@@ -332,12 +332,12 @@ body {
       display: block;
       background-image: url("../images/Mosaic_background.png");
       background-size: cover;
-      height: 100%;
+      height: auto;
       overflow: auto;
     }
     .container {
       padding: 0px;
-      overflow: auto;
+      overflow: visible;
       .heading {
         font-size: 20px;
         letter-spacing: 0.5px
@@ -411,17 +411,17 @@ body {
           }
         }
         .btn {
-          padding: 15px 20px 15px 15px;
+          padding: 10px 20px 10px 15px;
           max-width: 50%;
           width: auto;
           max-height: 25%;
           height: 24%;
           margin: 5px;
-          font-size: 20px;
+          font-size: 16px;
         }
 
         i {
-          font-size: 20px;
+          font-size: 16px;
         }
     }
     #js-resultsTableElement {
