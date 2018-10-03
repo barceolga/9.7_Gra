@@ -8,7 +8,7 @@ html {
   right: 0;
   top: 0;
   bottom: 0;
-  background-image: url("../images/Mosaic_background.png");
+  background-image: url("../images/mosaic.png");
   background-size: cover;
   height: 100%;
 }
@@ -188,6 +188,7 @@ body {
   color: #ffa31a;
   transition: 1s linear;
   transform: rotateY(360deg) scale(0.9);
+  background-color: #800000;
 }
 
 #js-resultsTableElement .col-lg-4 .game-stopped-looser {
@@ -195,6 +196,7 @@ body {
   color: #800000;
   transition: 1s linear;
   transform: rotateY(360deg) scale(1.25);
+  background-color: #777;
 }
 
 #js-resultsTableElement .col-lg-4 h2 {
@@ -202,6 +204,14 @@ body {
   font-weight: 900;
   color: #00264d;
   text-transform: capitalize;
+}
+
+#js-resultsTableElement .col-lg-4 .game_winner {
+  color: #800000;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #ffa31a;
+  margin: 5px;
 }
 
 #js-resultsTableElement .col-lg-4 .name, #js-resultsTableElement .col-lg-4 .score {
@@ -369,6 +379,9 @@ body {
   #js-resultsTableElement .col-xs-4 i {
     font-size: 30px;
   }
+  #js-resultsTableElement .col-xs-4 .game_winner {
+    font-weight: 16px;
+  }
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
@@ -504,6 +517,9 @@ body {
   }
   #js-resultsTableElement .col-sm-4 i {
     font-size: 30px;
+  }
+  #js-resultsTableElement .col-sm-4 .game_winner {
+    font-weight: 16px;
   }
 }
 

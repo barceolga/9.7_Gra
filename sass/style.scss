@@ -19,7 +19,7 @@ html {
     right: 0;
     top: 0;
     bottom: 0;
-    background-image: url("../images/Mosaic_background.png");
+    background-image: url("../images/mosaic.png");
     background-size: cover;
     height: 100%;
 }
@@ -68,11 +68,11 @@ body {
       background-color: $icon-rose;
       display: flex;
       justify-content: center;
-      .game_icon{
+      .game_icon {
         width: 50px;
         height: 50px;
         margin-right: 5px;
-        &.animated{
+        &.animated {
           animation: moving-rock  1.5s 1;
         }
       }
@@ -84,10 +84,10 @@ body {
       background-color: $icon-rose;
       display: flex;
       justify-content: center;
-      .game_icon{
+      .game_icon {
         width: 50px;
         height: 50px;
-        &.animated{
+        &.animated {
           animation: moving-paper 1.5s 1;
         }
       }
@@ -99,10 +99,10 @@ body {
       background-color: $icon-rose;
       display: flex;
       justify-content: center;
-      .game_icon{
+      .game_icon {
         width: 50px;
         height: 50px;
-        &.animated{
+        &.animated {
           animation: moving-scissors 1.5s 1;
         }
       }
@@ -161,18 +161,27 @@ body {
           color: $project-gold;
           transition: 1s linear;
           transform: rotateY(360deg) scale(0.90);
+          background-color: $project-red;
         }
         .game-stopped-looser {
           display: inline-block;
           color: $project-red;
           transition: 1s linear;
           transform: rotateY(360deg) scale(1.25);
+          background-color: #777;
         }
         h2 {
           font-size: 20px;
           font-weight: 900;
           color: $project-blue;
           text-transform: capitalize;
+        }
+        .game_winner {
+          color: $project-red;
+          font-weight: 900;
+          text-transform: uppercase;
+          background-color: $project-gold;
+          margin: 5px;
         }
 
     .name {
@@ -324,6 +333,9 @@ body {
         i {
             font-size: 30px;
         }
+        .game_winner {
+          font-weight: 16px;
+        }
       }
     }
   }
@@ -442,6 +454,9 @@ body {
         }
         i {
           font-size: 30px;
+        }
+        .game_winner {
+          font-weight: 16px;
         }
       }
     }
