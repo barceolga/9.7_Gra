@@ -13,16 +13,22 @@ $phone_landscape: "(max-width: 767px) and (orientation: landscape)";
 $tablet: "(min-width: 768px) and (max-width: 991px)";
 $desktop: "(min-width: 992px)";
 
+html {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("../images/Mosaic_background.png");
+    background-size: cover;
+    height: 100%;
+}
+
 body {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  display: block;
-  background-image: url("../images/Mosaic_background.png");
-  background-size: cover;
-  height: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+    background-color: transparent;
 }
 .container {
   display: flex;
@@ -323,25 +329,12 @@ body {
   }
 
   @media#{$phone_landscape} {
-    body {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: -1;
-      display: block;
-      background-image: url("../images/Mosaic_background.png");
-      background-size: cover;
-      height: auto;
-      overflow: auto;
-    }
     .container {
       padding: 0px;
-      overflow: visible;
       .heading {
         font-size: 20px;
         letter-spacing: 0.5px;
-        margin: 0 0 15px 0;
+        margin: 0 0 10px 0;
       }
       @keyframes moving-rock {
         0% {transform:  rotate(0deg) scale(1);}
@@ -437,7 +430,7 @@ body {
             width: 35px;
             height: 35px;
             padding: 7.5px;
-            margin: 12.5px;
+            margin: 5px;
             font-size: 18px;
             border-top: 2.5px solid $project-gold;
             border-left:  2.5px solid $project-gold;

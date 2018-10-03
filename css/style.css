@@ -2,16 +2,22 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
-  z-index: -1;
-  display: block;
+  top: 0;
+  bottom: 0;
   background-image: url("../images/Mosaic_background.png");
   background-size: cover;
   height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  background-color: transparent;
 }
 
 .container {
@@ -366,26 +372,13 @@ body {
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
-  body {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    display: block;
-    background-image: url("../images/Mosaic_background.png");
-    background-size: cover;
-    height: auto;
-    overflow: auto;
-  }
   .container {
     padding: 0px;
-    overflow: visible;
   }
   .container .heading, .container .first div, .container .second div, .container .third div {
     font-size: 20px;
     letter-spacing: 0.5px;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
   }
   @keyframes moving-rock {
     0% {
@@ -499,7 +492,7 @@ body {
     width: 35px;
     height: 35px;
     padding: 7.5px;
-    margin: 12.5px;
+    margin: 5px;
     font-size: 18px;
     border-top: 2.5px solid #ffa31a;
     border-left: 2.5px solid #ffa31a;
