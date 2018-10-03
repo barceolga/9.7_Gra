@@ -175,12 +175,13 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: #800000;
-  text-shadow: none;
+  text-shadow: 1px 0 #800000;
   text-transform: uppercase;
 }
 
 #js-resultsTableElement .col-lg-4 i {
   font-size: 60px;
+  text-shadow: 1px 0;
 }
 
 #js-resultsTableElement .col-lg-4 .game-stopped-winner {
@@ -218,7 +219,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: #00264d;
-  text-shadow: none;
+  text-shadow: 1px 0;
   text-transform: uppercase;
 }
 

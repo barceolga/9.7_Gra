@@ -149,12 +149,13 @@ body {
           font-size: 20px;
           font-weight: 700;
           color: $project-red;
-          text-shadow: none;
+          text-shadow: 1px 0 #800000;
           text-transform: uppercase;
         }
 
         i {
           font-size: 60px;
+          text-shadow: 1px 0;
         }
         .game-stopped-winner {
           display: inline-block;
@@ -188,7 +189,7 @@ body {
         font-size: 20px;
         font-weight: 700;
         color: $project-blue;
-        text-shadow: none;
+        text-shadow: 1px 0;
         text-transform: uppercase;
         }
 
