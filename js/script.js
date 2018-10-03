@@ -188,8 +188,6 @@ function checkGameWinner() {
             gameWinner.innerHTML = "You! Hurray!";
             setWinnerStyle();
             }, 2000);
-            //gameWinner.innerHTML = "You! Hurray!";
-            //setWinnerStyle();
             setTimeout(function(){setGameElements();}, 6000);
             gameState = 'ended';
         } else if (computer.score == 10) {
