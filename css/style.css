@@ -385,6 +385,7 @@ body {
   .container .heading, .container .first div, .container .second div, .container .third div {
     font-size: 20px;
     letter-spacing: 0.5px;
+    margin: 0 0 15px 0;
   }
   @keyframes moving-rock {
     0% {
