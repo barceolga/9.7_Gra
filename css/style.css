@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-html {
+body {
   position: fixed;
   left: 0;
   right: 0;
@@ -11,13 +11,6 @@ html {
   background-image: url("../images/mosaic_big.png");
   background-size: cover;
   height: 100%;
-}
-
-body {
-  height: 100%;
-  margin: 0;
-  overflow: auto;
-  background-color: transparent;
 }
 
 .container {
@@ -253,7 +246,7 @@ body {
 }
 
 @media (max-width: 767px) and (orientation: portrait) {
-  html {
+  body {
     background-image: url("../images/mosaic_phone_portrait.png");
     background-size: cover;
     height: 100%;
@@ -395,7 +388,7 @@ body {
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
-  html {
+  body {
     background-image: url("../images/mosaic_phone_landscape.png");
     background-size: cover;
     height: 100%;

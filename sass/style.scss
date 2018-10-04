@@ -13,22 +13,15 @@ $phone_landscape: "(max-width: 767px) and (orientation: landscape)";
 $tablet: "(min-width: 768px) and (max-width: 991px)";
 $desktop: "(min-width: 992px)";
 
-html {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-image: url("../images/mosaic_big.png");
-    background-size: cover;
-    height: 100%;
-}
-
 body {
-    height: 100%;
-    margin: 0;
-    overflow: auto;
-    background-color: transparent;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url("../images/mosaic_big.png");
+  background-size: cover;
+  height: 100%;
 }
 .container {
   display: flex;
@@ -224,7 +217,7 @@ body {
 }
 
   @media#{$phone_portrait} {
-    html {
+    body {
         background-image: url("../images/mosaic_phone_portrait.png");
         background-size: cover;
         height: 100%;
@@ -352,11 +345,12 @@ body {
   }
 
   @media#{$phone_landscape} {
-    html {
+    body {
         background-image: url("../images/mosaic_phone_landscape.png");
         background-size: cover;
         height: 100%;
     }
+
     .container {
       padding: 0px;
       .heading {
